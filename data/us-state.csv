@@ -1,4 +1,4 @@
-"id","name","state_code","created_at","updated_at","deleted_at"
+"state_id","state_name","state_code","state_date_created","state_date_updated","state_date_deleted"
 "1","Alaska","AK","0000-00-00 00:00:00","0000-00-00 00:00:00","0000-00-00 00:00:00"
 "2","Alabama","AL","0000-00-00 00:00:00","0000-00-00 00:00:00","0000-00-00 00:00:00"
 "3","Arkansas","AR","0000-00-00 00:00:00","0000-00-00 00:00:00","0000-00-00 00:00:00"

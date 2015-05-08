@@ -11,7 +11,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2015 at 07:56 PM
+-- Generation Time: May 08, 2015 at 02:04 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -25,27 +25,27 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Table structure for table `states`
+-- Table structure for table `state`
 --
 
-CREATE TABLE IF NOT EXISTS `states` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(22) NOT NULL,
+CREATE TABLE IF NOT EXISTS `state` (
+  `state_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `state_name` varchar(22) NOT NULL,
   `state_code` char(2) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `deleted_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `state_id` (`id`),
+  `state_date_created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `state_date_updated` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  `state_date_deleted` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`state_id`),
+  UNIQUE KEY `state_id` (`state_id`),
   KEY `state_code` (`state_code`),
-  KEY `name` (`name`)
+  KEY `name` (`state_name`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=52 ;
 
 --
--- Dumping data for table `states`
+-- Dumping data for table `state`
 --
 
-INSERT INTO `states` (`id`, `name`, `state_code`, `created_at`, `updated_at`, `deleted_at`) VALUES
+INSERT INTO `state` (`state_id`, `state_name`, `state_code`, `state_date_created`, `state_date_updated`, `state_date_deleted`) VALUES
 (1, 'Alaska', 'AK', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (2, 'Alabama', 'AL', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (3, 'Arkansas', 'AR', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
